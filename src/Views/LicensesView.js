@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import GetToken, { GetLicense, CreateLicense } from "./../ApiClients/LicenseClient";
 import Table from "../components/Table";
-
 import { SearchIcon, PlusIcon, SaveIcon, BackspaceIcon } from "@heroicons/react/solid";
 import InputBox from "../components/InputBox";
 

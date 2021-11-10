@@ -13,7 +13,7 @@ export default function MainView() {
   return (
     <div className="App">
       {isAuthenticated ? <SignOutButton /> : <SignInButton />}
-      <AuthenticatedTemplate>{license ? <License license={license} onBackBlick={() => setLicense(null)} /> : <LicenseView onLicenseSlected={(e) => setLicense(e)}></LicenseView>}</AuthenticatedTemplate>
+      <AuthenticatedTemplate>{license ? <License license={license} onBackClick={() => setLicense(null)} /> : <LicenseView onLicenseSlected={(e) => setLicense(e)}></LicenseView>}</AuthenticatedTemplate>
 
       <UnauthenticatedTemplate></UnauthenticatedTemplate>
     </div>
