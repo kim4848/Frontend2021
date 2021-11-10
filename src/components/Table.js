@@ -24,9 +24,9 @@ export default function Table(props) {
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{license.companyName}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{license.id}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <a href="#" onClick={() => props.onSelect(license)} className="text-blue-600 hover:text-blue-900">
+                      <button onClick={() => props.onSelect(license)} className="text-blue-600 hover:text-blue-900">
                         Edit
-                      </a>
+                      </button>
                     </td>
                   </tr>
                 ))}
