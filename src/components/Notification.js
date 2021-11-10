@@ -1,8 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useState, useEffect, useCallback } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import { CheckCircleIcon } from "@heroicons/react/outline";
-import { XIcon } from "@heroicons/react/solid";
 
 export default function Notification(e) {
   const [show, setShow] = useState(false);
@@ -14,10 +13,7 @@ export default function Notification(e) {
   return (
     <>
       {/* Global notification live region, render this permanently at the end of the document */}
-      <div
-        aria-live="assertive"
-        className="fixed inset-0 z-50 flex items-end px-4 py-6 pointer-events-none sm:p-6 sm:items-start"
-      >
+      <div aria-live="assertive" className="fixed inset-0 z-50 flex items-end px-4 py-6 pointer-events-none sm:p-6 sm:items-start">
         <div className="w-full flex flex-col items-center space-y-4 sm:items-end">
           {/* Notification panel, dynamically insert this into the live region when it needs to be displayed */}
           <Transition
@@ -34,15 +30,10 @@ export default function Notification(e) {
               <div className="p-4">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <CheckCircleIcon
-                      className="h-6 w-6 text-green-400"
-                      aria-hidden="true"
-                    />
+                    <CheckCircleIcon className="h-6 w-6 text-green-400" aria-hidden="true" />
                   </div>
                   <div className="ml-3 w-0 flex-1 pt-0.5">
-                    <p className="text-sm font-medium text-gray-900">
-                      Successfully saved!
-                    </p>
+                    <p className="text-sm font-medium text-gray-900">Successfully saved!</p>
                   </div>
                 </div>
               </div>
