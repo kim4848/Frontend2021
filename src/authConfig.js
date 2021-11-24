@@ -13,8 +13,9 @@ import { LogLevel } from "@azure/msal-browser";
 export const msalConfig = {
   auth: {
     clientId: "448c4c04-af3a-4ee3-87c5-3c1634c5c52b",
-    authority: "https://login.microsoftonline.com/1ea2e185-b5a3-45d4-87ad-68995abf62a0",
-    redirectUri: "https://frontend.kjsoft.dk/",
+    authority:
+      "https://login.microsoftonline.com/1ea2e185-b5a3-45d4-87ad-68995abf62a0",
+    redirectUri: "http://localhost:3000/",
   },
   cache: {
     cacheLocation: "sessionStorage", // This configures where your cache will be stored
@@ -54,5 +55,7 @@ export const msalConfig = {
  * https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#openid-connect-scopes
  */
 export const loginRequest = {
-  scopes: ["api://c410b44f-3b6a-43ff-857b-60d6d57813ea/ReadWrite/LicenseReadWrite"],
+  scopes: [
+    "api://c410b44f-3b6a-43ff-857b-60d6d57813ea/ReadWrite/LicenseReadWrite",
+  ],
 };

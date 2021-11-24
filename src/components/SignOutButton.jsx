@@ -1,5 +1,8 @@
 import React from "react";
 import { useMsal } from "@azure/msal-react";
+import {
+LogoutIcon
+} from "@heroicons/react/outline";
 
 /**
  * Renders a sign-out button
@@ -20,7 +23,8 @@ export const SignOutButton = () => {
     }
   };
   return (
-    <button className="inline-flex items-center px-2 py-1 border border-transparent shadow-sm text-base font-sm rounded-md text-white bg-gray-500 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" variant="secondary" onClick={() => handleLogout("redirect")}>
+    <button className="w-full text-gray-600 hover:bg-gray-50 hover:text-gray-900 group rounded-md py-2 px-2 flex items-center text-sm font-medium" variant="secondary" onClick={() => handleLogout("redirect")}>
+      <LogoutIcon className="h-6 w-6 mr-3"/>
       Log out
     </button>
   );

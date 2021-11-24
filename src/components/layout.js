@@ -5,7 +5,10 @@ import {
   HomeIcon,
   MenuAlt2Icon,
   XIcon,
+  UserIcon,
 } from "@heroicons/react/outline";
+import { useIsAuthenticated } from "@azure/msal-react";
+import { SignOutButton } from "./SignOutButton";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
@@ -22,7 +25,7 @@ function classNames(...classes) {
 
 export default function Layout(props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  const isAuthenticated = useIsAuthenticated();
   return (
     <>
       <div>
@@ -108,6 +111,7 @@ export default function Layout(props) {
                         {item.name}
                       </a>
                     ))}
+                    {isAuthenticated ? <SignOutButton /> : <SignOutButton />}
                   </nav>
                 </div>
               </div>
@@ -154,6 +158,7 @@ export default function Layout(props) {
                     {item.name}
                   </a>
                 ))}
+                {isAuthenticated ? <SignOutButton /> : null}
               </nav>
             </div>
           </div>
@@ -186,11 +191,7 @@ export default function Layout(props) {
                     <div>
                       <Menu.Button className="max-w-xs flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         <span className="sr-only">Open user menu</span>
-                        <img
-                          className="h-8 w-8 rounded-full"
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                          alt=""
-                        />
+                        <UserIcon className="h-6 w-6 text-gray-400" />
                       </Menu.Button>
                     </div>
                     <Transition
@@ -227,11 +228,7 @@ export default function Layout(props) {
 
             <main className="flex-1">
               <div className="py-6">
-                <div className="px-4 sm:px-6 md:px-0">
-                  <h1 className="text-2xl font-semibold text-gray-900">
-                    Dashboard
-                  </h1>
-                </div>
+                <div className="px-4 sm:px-6 md:px-0"></div>
                 <div className="px-4 sm:px-6 md:px-0">
                   {/* Replace with your content */}
                   <div className="py-4">{props.children}</div>
