@@ -68,7 +68,7 @@ export default function LicenseView(props) {
         <div className="mb-5 mt-3 border border-gray-300 p-3">
           <InputBox
             onChange={(e) => setNewCompanyname(e.target.value)}
-            headLine="Company name"
+            headLine="Company name."
           ></InputBox>
           <button
             onClick={() => setShowNewDialog(false)}
