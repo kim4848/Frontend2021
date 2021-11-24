@@ -7,7 +7,6 @@ import License from "./../components/License";
 import LicenseView from "./LicensesView";
 import { useIsAuthenticated } from "@azure/msal-react";
 import { SignInButton } from "./../components/SignInButton";
-import { SignOutButton } from "./../components/SignOutButton";
 
 export default function MainView() {
   const [license, setLicense] = useState(null);
