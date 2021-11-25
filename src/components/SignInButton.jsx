@@ -20,7 +20,7 @@ export const SignInButton = () => {
     }
   };
   return (
-    <button className="inline-flex items-center px-2 py-1 border border-transparent shadow-sm text-base font-sm rounded-md text-white bg-gray-500 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" variant="secondary" onClick={() => handleLogin("redirect")}>
+    <button className="inline-flex items-center px-2 py-1 border border-transparent shadow-sm text-base font-sm rounded-md text-white bg-indigo-500 pr-8 pl-8 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" variant="secondary" onClick={() => handleLogin("redirect")}>
       Login
     </button>
   );

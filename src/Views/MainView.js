@@ -17,12 +17,10 @@ export default function MainView() {
       {isAuthenticated ? null : (
         <div className="grid place-items-center">
           <div className="h-48 w-48 p-5 flex flex-col content-center rounded shadow-md border items-center ">
-            <h1 className="mt-5 font-medium text-2xl text-indigo-600 ">
+            <h1 className="mt-5 font-semibold text-lg text-indigo-600 ">
               Account
             </h1>
-            <h1 className="font-medium text-lg text-gray-500">
-              Log in is required
-            </h1>
+            <h1 className="font-medium text-gray-500">Log in is required</h1>
             <div className="content-center mt-5">
               <SignInButton />
             </div>
